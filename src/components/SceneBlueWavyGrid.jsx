@@ -46,7 +46,7 @@ export default function SceneBlueWavyGrid({ onReset }) {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-wavy-grid text-slate-800 flex flex-col justify-between items-center p-3 sm:p-6 md:p-8 pb-24 overflow-hidden select-none">
+    <div className="relative min-h-[100dvh] w-full bg-wavy-grid text-slate-800 flex flex-col justify-between items-center p-3 sm:p-6 md:p-8 pb-10 sm:pb-16 overflow-x-hidden select-none">
       
       {/* Hand-Drawn Y2K Floating Doodles (Stars, Swirls, Cat Face, Mini Cake) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
@@ -73,27 +73,27 @@ export default function SceneBlueWavyGrid({ onReset }) {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'spring', damping: 12 }}
-        className="relative z-10 text-center mt-3 sm:mt-6 md:mt-10 max-w-full"
+        className="relative z-10 text-center mt-2 sm:mt-6 md:mt-10 max-w-full px-2"
       >
-        <div className="bg-white/80 backdrop-blur-md px-4 sm:px-8 md:px-14 py-4 sm:py-6 md:py-8 rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-sky-400 shadow-2xl animate-float">
-          <h1 className="font-fun text-3xl sm:text-7xl md:text-8xl tracking-wider text-sky-900 drop-shadow-[0_4px_12px_rgba(2,132,199,0.3)]">
+        <div className="bg-white/85 backdrop-blur-md px-3.5 sm:px-8 md:px-14 py-3 sm:py-6 md:py-8 rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-sky-400 shadow-2xl animate-float">
+          <h1 className="font-fun text-2xl sm:text-6xl md:text-8xl tracking-wider text-sky-900 drop-shadow-[0_4px_12px_rgba(2,132,199,0.3)]">
             HAPPIEST BIRTHDAYYY!!!
           </h1>
           
-          <div className="mt-2 sm:mt-3 flex items-center justify-center gap-2">
+          <div className="mt-1.5 sm:mt-3 flex items-center justify-center gap-2">
             <input
               type="text"
               value={recipientName}
               onChange={(e) => setRecipientName(e.target.value)}
               placeholder="Enter name..."
-              className="bg-sky-100/90 text-sky-950 font-handwriting text-2xl sm:text-3xl font-bold text-center px-3 sm:px-4 py-1 rounded-full border-2 border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-600 max-w-xs shadow-inner"
+              className="bg-sky-100/90 text-sky-950 font-handwriting text-xl sm:text-3xl font-bold text-center px-3 sm:px-4 py-1 rounded-full border-2 border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-600 max-w-xs shadow-inner"
             />
           </div>
         </div>
       </motion.div>
 
       {/* CELEBRATION MAIN CARD */}
-      <div className="relative z-10 w-full max-w-4xl my-4 sm:my-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-center">
+      <div className="relative z-10 w-full max-w-4xl my-3 sm:my-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-center px-2">
         
         {/* LEFT: Interactive Cake & Candle Blowing Station */}
         <motion.div

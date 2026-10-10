@@ -26,7 +26,7 @@ export default function SceneGinghamCover({ onNextScene }) {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-gingham flex flex-col justify-between items-center p-3 sm:p-6 md:p-8 pb-12 overflow-hidden select-none">
+    <div className="relative min-h-[100dvh] w-full bg-gingham flex flex-col justify-between items-center p-3 sm:p-6 md:p-8 pb-10 sm:pb-16 overflow-x-hidden select-none">
       
       {/* Floating background sparkles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -46,26 +46,26 @@ export default function SceneGinghamCover({ onNextScene }) {
       </div>
 
       {/* TOP CENTER: Pink Cloud Header Card with "Happy Birthday" */}
-      <div className="relative z-10 mt-4 sm:mt-6 flex flex-col items-center gap-4 max-w-full">
+      <div className="relative z-10 mt-2 sm:mt-6 flex flex-col items-center gap-3 sm:gap-4 max-w-full px-2">
         <motion.div
           initial={{ opacity: 0, y: -40, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, type: 'spring' }}
         >
-          <div className="relative bg-gradient-to-b from-pink-300 via-pink-400 to-pink-300 text-pink-950 px-6 sm:px-10 md:px-16 py-4 sm:py-6 md:py-9 rounded-[2rem] sm:rounded-[3rem] shadow-2xl border-4 border-white/80 animate-float backdrop-blur-md">
+          <div className="relative bg-gradient-to-b from-pink-300 via-pink-400 to-pink-300 text-pink-950 px-5 sm:px-10 md:px-16 py-3.5 sm:py-6 md:py-8 rounded-[1.75rem] sm:rounded-[3rem] shadow-2xl border-4 border-white/80 animate-float backdrop-blur-md">
             {/* Cloud border effect blobs */}
             <div className="absolute -top-3 left-4 sm:left-6 w-8 sm:w-12 h-8 sm:h-12 bg-pink-300 rounded-full border-t-4 border-white/80"></div>
             <div className="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 w-14 sm:w-20 h-14 sm:h-20 bg-pink-300 rounded-full border-t-4 border-white/80"></div>
             <div className="absolute -top-3 right-4 sm:right-6 w-8 sm:w-12 h-8 sm:h-12 bg-pink-300 rounded-full border-t-4 border-white/80"></div>
 
-            <h1 className="font-handwriting text-4xl sm:text-6xl md:text-8xl tracking-wide font-bold text-center drop-shadow-md text-pink-900 leading-tight">
+            <h1 className="font-handwriting text-3xl sm:text-6xl md:text-8xl tracking-wide font-bold text-center drop-shadow-md text-pink-900 leading-tight">
               Happy Birthday
             </h1>
             
-            <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-1 text-pink-800 font-soft text-xs sm:text-sm md:text-base font-semibold">
-              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-pink-700 animate-spin" />
+            <div className="flex items-center justify-center gap-1 sm:gap-2 mt-1 text-pink-800 font-soft text-[11px] sm:text-sm md:text-base font-semibold">
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-pink-700 animate-spin shrink-0" />
               <span>A Special Celebration Just For You</span>
-              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-pink-700 animate-spin" />
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-pink-700 animate-spin shrink-0" />
             </div>
           </div>
         </motion.div>
@@ -78,19 +78,19 @@ export default function SceneGinghamCover({ onNextScene }) {
         >
           <button
             onClick={onNextScene}
-            className="group relative inline-flex items-center gap-2.5 bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 text-white px-8 py-3.5 sm:px-10 sm:py-4 rounded-full font-handwriting text-2xl sm:text-3xl font-bold shadow-2xl hover:shadow-pink-500/50 hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/80 cursor-pointer"
+            className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 text-white px-7 py-3 sm:px-10 sm:py-4 rounded-full font-handwriting text-xl sm:text-3xl font-bold shadow-2xl hover:shadow-pink-500/50 hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-white/80 cursor-pointer"
           >
             <span>Goooo</span>
-            <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform" />
-            <div className="absolute -top-2 -right-2 bg-yellow-400 text-pink-950 rounded-full p-1 shadow-md">
-              <Sparkles className="w-4 h-4 fill-current" />
+            <ArrowRight className="w-5 h-5 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform" />
+            <div className="absolute -top-1.5 -right-1.5 bg-yellow-400 text-pink-950 rounded-full p-1 shadow-md">
+              <Sparkles className="w-3.5 h-3.5 fill-current" />
             </div>
           </button>
         </motion.div>
       </div>
 
       {/* MIDDLE CONTENT GRID: Cake Card (Left) & Teddy Bear (Right) */}
-      <div className="relative z-10 w-full max-w-5xl my-4 sm:my-6 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-end justify-items-center">
+      <div className="relative z-10 w-full max-w-5xl my-3 sm:my-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-end justify-items-center px-2">
         
         {/* BOTTOM LEFT: Beige Parchment Card with Birthday Cake */}
         <motion.div
